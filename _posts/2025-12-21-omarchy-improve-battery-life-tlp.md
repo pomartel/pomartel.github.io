@@ -1,7 +1,7 @@
 ---
 title: Replacing Power Profiles with TLP to improve battery life
 date: 2025-12-16
-tags: [omarchy, howto]
+tags: [howto, tlp]
 ---
 
 This guide explains how to fully replace **power-profiles-daemon** with **TLP + tlp-pd** in Omarchy, while preserving compatibility with tools and scripts that expect `powerprofilesctl`.
