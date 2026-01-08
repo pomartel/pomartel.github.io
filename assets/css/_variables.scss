@@ -1,0 +1,31 @@
+@use "themes/light-overrides";
+@use "themes/dark-overrides";
+
+:root {
+  --bs-font-monospace:
+    Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+}
+
+html {
+  @media (prefers-color-scheme: light) {
+    &:not([data-mode]),
+    &[data-mode="light"] {
+      @include light-overrides.styles;
+    }
+
+    &[data-mode="dark"] {
+      @include dark-overrides.styles;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &:not([data-mode]),
+    &[data-mode="dark"] {
+      @include dark-overrides.styles;
+    }
+
+    &[data-mode="light"] {
+      @include light-overrides.styles;
+    }
+  }
+}

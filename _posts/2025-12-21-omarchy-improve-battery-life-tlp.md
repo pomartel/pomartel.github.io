@@ -6,9 +6,9 @@ tags: [howto, tlp]
 
 This guide explains how to fully replace **power-profiles-daemon** with **TLP + tlp-pd** in Omarchy, while preserving compatibility with tools and scripts that expect `powerprofilesctl`.
 
-What is TLP : https://linrunner.de/tlp/introduction.html
+What is TLP : <https://linrunner.de/tlp/introduction.html>
 
-Why use TLP instead of power-profiles-daemon? https://linrunner.de/tlp/faq/ppd.html
+Why use TLP instead of power-profiles-daemon? <https://linrunner.de/tlp/faq/ppd.html>
 
 One thing I really like is that you get automatic profile switching out of the box. So if you unplug your laptop, the profile switches to save battery life. There is also lot of possible customization but this guide only covers the initial installation.
 
@@ -39,6 +39,7 @@ What each component does:
 
 * **tlp**: core power management engine
 * **tlp-pd**: implements the Power Profiles D-Bus API
+
 ---
 
 ## 3. Enable required services

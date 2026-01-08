@@ -1,0 +1,26 @@
+/** Added body to override prims.js default styles */
+body pre[class*="language-"] {
+  margin: 1.5em 0;
+  border-radius: 6px;
+}
+
+:not(pre) > code {
+  padding: 0.2em 0.4em;
+  white-space: break-spaces;
+  background-color: var(--bgColor-neutral-muted);
+  border-radius: 6px;
+}
+
+kbd {
+  display: inline-block;
+  padding: 0.25rem;
+  font-size: 11px;
+  line-height: 10px;
+  color: var(--fgColor-default);
+  vertical-align: middle;
+  background-color: var(--bgColor-muted);
+  border: solid 1px var(--borderColor-neutral-muted);
+  border-bottom-color: var(--borderColor-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--borderColor-neutral-muted);
+}
