@@ -1,3 +1,28 @@
+#topbar-wrapper,
 .readtime {
-  display: none;
+  display: none !important;
+}
+
+.post-tail-wrapper {
+  margin-top: 3rem;
+}
+
+footer {
+  margin: 0 !important;
+  border: none;
+  height: 3rem;
+}
+
+#page-category a:hover,
+#page-tag a:hover,
+#access-lastmod a:hover,
+.post-tail-wrapper .license-wrapper > a:hover,
+#search-results a:hover,
+footer a:hover,
+#topbar #breadcrumb a:hover,
+.post-meta a:not([class]):hover,
+.content a:not(.img-link):hover {
+  color: var(--fg-color-default) !important;
+  border-bottom: 1px solid var(--accent-color-muted);
+  text-decoration: none;
 }

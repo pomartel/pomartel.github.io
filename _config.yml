@@ -14,12 +14,11 @@ timezone: America/Toronto
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Blogmarchy # the main title
+title: sudomarchy # the main title
 
-tagline: Tips for customizing Omarchy and Hyprland # it will display as the subtitle
+tagline: &tagline My Omarchy and Hyprland customizations # it will display as the subtitle
 
-description: >- # used by seo meta and the atom feed
-  Tips for customizing Omarchy and Hyprland
+description: *tagline # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -29,7 +28,7 @@ github:
   username: pomartel # change to your GitHub username
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: sudomarchy # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -38,7 +37,7 @@ social:
   email: pomartel@coderubik.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    # - https://twitter.com/username # change to your Twitter homepage
+    - https://twitter.com/sudomarchy # change to your Twitter homepage
     - https://github.com/pomartel # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -88,7 +87,7 @@ pageviews:
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
-theme_mode: # [light | dark]
+theme_mode: dark
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url

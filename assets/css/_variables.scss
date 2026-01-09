@@ -1,31 +1,126 @@
-@use "themes/light-overrides";
-@use "themes/dark-overrides";
+@use "sass:color";
 
-:root {
-  --bs-font-monospace:
-    Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-}
+html[data-mode="dark"] {
+  --accent-color: #9ac969;
+  --accent-color-muted: #b3f5f4;
+  --fg-color-default: #f0f6fc;
+  --fg-color-muted: #ccc;
+  --bg-color-default: #1c1d28;
+  --bg-color-muted: #{color.adjust(#1c1d28, $lightness: 5%)};
+  --bg-color-more-muted: #{color.adjust(#1c1d28, $lightness: 25%)};
+  --bg-color-really-muted: #{color.adjust(#1c1d28, $lightness: 45%)};
+  --border-color-default: #3d444d;
 
-html {
-  @media (prefers-color-scheme: light) {
-    &:not([data-mode]),
-    &[data-mode="light"] {
-      @include light-overrides.styles;
-    }
+  /* Framework color */
+  --main-bg: var(--bg-color-default);
+  /* --mask-bg: rgb(68 69 70); */
+  /* --main-border-color: rgb(44 45 45); */
 
-    &[data-mode="dark"] {
-      @include dark-overrides.styles;
-    }
-  }
+  /* Common color */
+  --text-color: var(--fg-color-default);
+  /* --text-muted-color: #868686; */
+  /* --text-muted-highlight-color: #aeaeae; */
+  --heading-color: var(--site-title-color);
+  /* --label-color: #a7a7a7; */
+  /* --blockquote-border-color: rgb(66 66 66); */
+  /* --blockquote-text-color: #868686; */
+  --link-color: var(--accent-color-muted);
+  --link-underline-color: var(--link-color);
+  /* --button-bg: #1e1e1e; */
+  /* --btn-border-color: #2e2f31; */
+  /* --btn-backtotop-color: var(--text-color); */
+  /* --btn-backtotop-border-color: #212122; */
+  /* --card-header-bg: #292929; */
+  /* --checkbox-color: rgb(118 120 121); */
+  /* --checkbox-checked-color: var(--link-color); */
+  /* --img-bg: radial-gradient(circle, rgb(22 22 24) 0%, rgb(32 32 32) 100%); */
 
-  @media (prefers-color-scheme: dark) {
-    &:not([data-mode]),
-    &[data-mode="dark"] {
-      @include dark-overrides.styles;
-    }
+  /* --shimmer-bg: linear-gradient(
+    90deg,
+    rgb(255 255 255 / 0%) 0%,
+    rgb(58 55 55 / 40%) 50%,
+    rgb(255 255 255 / 0%) 100%
+  ); */
 
-    &[data-mode="light"] {
-      @include light-overrides.styles;
-    }
-  }
+  /* Sidebar */
+  --site-title-color: var(--accent-color);
+  --site-subtitle-color: var(--fg-color-muted);
+  --sidebar-bg: var(--bg-color-muted);
+  --sidebar-border-color: var(--border-color-default);
+  --sidebar-muted-color: var(--fg-color-muted);
+  --sidebar-active-color: var(--accent-color-muted);
+  --sidebar-hover-bg: var(--bg-color-default);
+  --sidebar-btn-bg: var(--bg-color-default);
+  --sidebar-btn-color: var(--bg-color-really-muted);
+  --avatar-border-color: var(--border-color-default);
+
+  /* Topbar */
+  /* --topbar-bg: rgb(27 27 30 / 64%); */
+  /* --topbar-text-color: var(--text-color); */
+  /* --search-border-color: rgb(55 55 55); */
+  /* --search-icon-color: rgb(100 102 105); */
+  /* --input-focus-border-color: rgb(112 114 115); */
+
+  /* Home page */
+  /* --post-list-text-color: rgb(175 176 177); */
+  /* --btn-patinator-text-color: var(--text-color); */
+  /* --btn-paginator-hover-color: #2e2e2e; */
+
+  /* Posts */
+  /* --toc-highlight: rgb(116 178 243); */
+  /* --toc-popup-border-color: #373737; */
+  /* --tag-hover: rgb(43 56 62); */
+  /* --tb-odd-bg: #252526; */
+  /* --tb-even-bg: rgb(31 31 34); */
+  /* --tb-border-color: var(--tb-odd-bg); */
+  /* --footnote-target-bg: rgb(63 81 181); */
+  /* --btn-share-color: #6c757d; */
+  /* --btn-share-hover-color: #bfc1ca; */
+  --card-bg: var(--bg-color-muted);
+  --card-hover-bg: var(--bg-color-more-muted);
+  /* --card-shadow: rgb(21 21 21 / 72%) 0 6px 18px 0,
+    rgb(137 135 135 / 24%) 0 0 0 1px; */
+  /* --kbd-wrap-color: #6a6a6a; */
+  /* --kbd-text-color: #d3d3d3; */
+  /* --kbd-bg-color: #242424; */
+  /* --prompt-text-color: rgb(216 212 212 / 75%); */
+  /* --prompt-tip-bg: rgb(22 60 36 / 64%); */
+  /* --prompt-tip-icon-color: rgb(15 164 15 / 81%); */
+  /* --prompt-info-bg: rgb(7 59 104 / 80%); */
+  /* --prompt-info-icon-color: #0075d1; */
+  /* --prompt-warning-bg: rgb(90 69 3 / 88%); */
+  /* --prompt-warning-icon-color: rgb(255 165 0 / 80%); */
+  /* --prompt-danger-bg: rgb(86 28 8 / 80%); */
+  /* --prompt-danger-icon-color: #cd0202; */
+
+  /* Tags */
+  /* --tag-border: rgb(59 79 88); */
+  /* --tag-shadow: rgb(32 33 33); */
+  /* --dash-color: rgb(63 65 68); */
+  /* --search-tag-bg: #292828; */
+
+  /* Categories */
+  /* --categories-border: rgb(64 66 69 / 50%); */
+  /* --categories-hover-bg: rgb(73 75 76); */
+  /* --categories-icon-hover-color: white; */
+
+  /* Archive */
+  /* --timeline-node-bg: rgb(150 152 156); */
+  /* --timeline-color: rgb(63 65 68); */
+  /* --timeline-year-dot-color: var(--timeline-color); */
+
+  /* Code highlight colors */
+  /* --language-border-color: #2d2d2d; */
+  /* --highlight-bg-color: #151515; */
+  /* --highlighter-rouge-color: #c9def1; */
+  /* --highlight-lineno-color: #808080; */
+  /* --inline-code-bg: rgb(255 255 255 / 5%); */
+  /* --code-color: #b0b0b0; */
+  /* --code-header-text-color: #6a6a6a; */
+  /* --code-header-muted-color: #353535; */
+  /* --code-header-icon-color: #565656; */
+  /* --clipboard-checked-color: #2bcc2b; */
+  /* --filepath-text-color: #cacaca; */
+
+  --bs-font-monospace: "Fira Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }

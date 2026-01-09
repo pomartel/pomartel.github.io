@@ -1,20 +1,24 @@
 {
+  // Editor settings
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 120,
+  "editor.rulers": [120],
   // Prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   // Shopify Liquid
   "files.associations": {
-    "*.html": "liquid"
+    "*.html": "liquid",
   },
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
   },
   // Formatter
   "[html][liquid]": {
-    "editor.defaultFormatter": "Shopify.theme-check-vscode"
+    "editor.defaultFormatter": "Shopify.theme-check-vscode",
   },
   "[shellscript]": {
-    "editor.defaultFormatter": "mkhl.shfmt"
+    "editor.defaultFormatter": "mkhl.shfmt",
   },
   // Disable vscode built-in stylelint
   "css.validate": false,
@@ -25,6 +29,6 @@
   "stylelint.validate": ["css", "scss"],
   // Run tasks in macOS
   "terminal.integrated.profiles.osx": {
-    "zsh": { "path": "/bin/zsh", "args": ["-l", "-i"] }
-  }
+    "zsh": { "path": "/bin/zsh", "args": ["-l", "-i"] },
+  },
 }
