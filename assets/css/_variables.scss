@@ -1,30 +1,32 @@
 @use "sass:color";
 
 html[data-mode="dark"] {
-  --accent-color: #9ac969;
-  --accent-color-muted: #b3f5f4;
-  --fg-color-default: #f0f6fc;
-  --fg-color-muted: #ccc;
-  --bg-color-default: #1c1d28;
-  --bg-color-muted: #{color.adjust(#1c1d28, $lightness: 5%)};
-  --bg-color-more-muted: #{color.adjust(#1c1d28, $lightness: 25%)};
-  --bg-color-really-muted: #{color.adjust(#1c1d28, $lightness: 45%)};
-  --border-color-default: #3d444d;
+  --main-color: #9ac969;
+  --secondary-color: #b3f5f4;
+  --fg-color: rgb(240 246 252);
+  --fg-color-muted-10: #{color.adjust(rgb(240 246 252), $lightness: -10%)};
+
+  --bg-color: #1c1d28;
+  --bg-color-muted-5: #{color.adjust(#1c1d28, $lightness: 5%)};
+  --bg-color-muted-25: #{color.adjust(#1c1d28, $lightness: 25%)};
+  --bg-color-muted-45: #{color.adjust(#1c1d28, $lightness: 45%)};
+
+  --border-color: #3d444d;
 
   /* Framework color */
-  --main-bg: var(--bg-color-default);
-  /* --mask-bg: rgb(68 69 70); */
+  --main-bg: var(--bg-color);
+  /* --mask-bg: rgb(68 69 70 */
   /* --main-border-color: rgb(44 45 45); */
 
   /* Common color */
-  --text-color: var(--fg-color-default);
+  --text-color: var(--fg-color);
   /* --text-muted-color: #868686; */
   /* --text-muted-highlight-color: #aeaeae; */
   --heading-color: var(--site-title-color);
   /* --label-color: #a7a7a7; */
   /* --blockquote-border-color: rgb(66 66 66); */
   /* --blockquote-text-color: #868686; */
-  --link-color: var(--accent-color-muted);
+  --link-color: var(--secondary-color);
   --link-underline-color: var(--link-color);
   /* --button-bg: #1e1e1e; */
   /* --btn-border-color: #2e2f31; */
@@ -43,16 +45,16 @@ html[data-mode="dark"] {
   ); */
 
   /* Sidebar */
-  --site-title-color: var(--accent-color);
-  --site-subtitle-color: var(--fg-color-muted);
-  --sidebar-bg: var(--bg-color-muted);
-  --sidebar-border-color: var(--border-color-default);
-  --sidebar-muted-color: var(--fg-color-muted);
-  --sidebar-active-color: var(--accent-color-muted);
-  --sidebar-hover-bg: var(--bg-color-default);
-  --sidebar-btn-bg: var(--bg-color-default);
-  --sidebar-btn-color: var(--bg-color-really-muted);
-  --avatar-border-color: var(--border-color-default);
+  --site-title-color: var(--main-color);
+  --site-subtitle-color: var(--fg-color-muted-10);
+  --sidebar-bg: var(--bg-color-muted-5);
+  --sidebar-border-color: var(--border-color);
+  --sidebar-muted-color: var(--fg-color-muted-10);
+  --sidebar-active-color: var(--secondary-color);
+  --sidebar-hover-bg: var(--bg-color);
+  --sidebar-btn-bg: var(--bg-color);
+  --sidebar-btn-color: var(--bg-color-muted-45);
+  --avatar-border-color: var(--border-color);
 
   /* Topbar */
   /* --topbar-bg: rgb(27 27 30 / 64%); */
@@ -76,8 +78,8 @@ html[data-mode="dark"] {
   /* --footnote-target-bg: rgb(63 81 181); */
   /* --btn-share-color: #6c757d; */
   /* --btn-share-hover-color: #bfc1ca; */
-  --card-bg: var(--bg-color-muted);
-  --card-hover-bg: var(--bg-color-more-muted);
+  --card-bg: var(--bg-color-muted-5);
+  --card-hover-bg: var(--bg-color-muted-25);
   /* --card-shadow: rgb(21 21 21 / 72%) 0 6px 18px 0,
     rgb(137 135 135 / 24%) 0 0 0 1px; */
   /* --kbd-wrap-color: #6a6a6a; */

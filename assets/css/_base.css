@@ -22,7 +22,7 @@ footer a:hover,
 #topbar #breadcrumb a:hover,
 .post-meta a:not([class]):hover,
 .content a:not(.img-link):hover {
-  color: var(--fg-color-default) !important;
-  border-bottom: 1px solid var(--accent-color-muted);
+  color: var(--fg-color) !important;
+  border-bottom: 1px solid var(--fg-color);
   text-decoration: none;
 }
